@@ -3,15 +3,19 @@ var lienzo = d.getContext("2d");
 var lineas= 30;
 var l = 0;
 var yi, xf;
+var colorcito = "#FAA";
 
-while(l < lineas)
+for(l = 0; l < lineas; l++)
 {
   yi = 10 * l;
   xf = 10 * (l + 1);
-  dibujarlinea("#AAF", 0, yi, xf, 300);
+  dibujarlinea(colorcito, 0, yi, xf, 300);
   console.log("linea " + l);
-  l = l + 1;
+
 }
+
+dibujarlinea(colorcito, 1,1,1,299);
+dibujarlinea(colorcito, 1,299,299,299);
 
 function dibujarlinea(color, xinicial, yinicial, xfinal, yfinal)
 {
